@@ -2,6 +2,8 @@ package co.edu.uniquindio;
 
 import org.junit.jupiter.api.*;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.logging.Logger;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -9,6 +11,10 @@ import static org.junit.jupiter.api.Assertions.*;
 class BatallonTest {
 
     private static final Logger LOG = Logger.getLogger(BatallonTest.class.getName());
+
+    private Batallon batallon;
+    private TransporteTropas transporte;
+    private Blindado blindado;
 
     @DisplayName("Prueba assertEquals")
     @Test
