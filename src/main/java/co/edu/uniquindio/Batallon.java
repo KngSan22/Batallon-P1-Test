@@ -42,6 +42,15 @@ public class Batallon {
         return encontrado;
     }
 
+    public boolean eliminarVehiculo(String id) {
+        boolean eliminado = false;
+        Vehiculo vehiculo = buscarVehiculo(id);
+        if (vehiculo != null && vehiculo.getListaDetallesMision().isEmpty()) {
+            eliminado = listaVehiculos.remove(vehiculo);
+        }
+        return eliminado;
+    }
+
     public boolean registrarMision(Mision mision) {
         boolean registrada = false;
         if (mision != null && mision.esValida() && buscarMision(mision.getId()) == null
